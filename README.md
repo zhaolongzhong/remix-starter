@@ -1,6 +1,8 @@
 # remix-starter
 
-## Get started
+## Setup
+
+Install dependencies
 
 ```sh
 npm install
