@@ -1,0 +1,261 @@
+/* app/markdown-override.css */
+
+/* Adjust Heading Sizes */
+.prose h1 {
+  font-size: 2rem; /* Default is often around 2.25rem or higher, make it slightly smaller */
+}
+
+.prose h2 {
+  font-size: 1.5rem; /* Adjusted to be less overwhelming */
+}
+
+.prose h3 {
+  font-size: 1.25rem; /* Smaller for good visual hierarchy */
+}
+
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-size: 1.125rem; /* Keep them smaller but distinct */
+}
+
+/* Headings */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #111827; /* Dark color for light mode */
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  color: #374151; /* Slightly lighter than headings for better contrast */
+}
+
+/* Dark mode headings */
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #e5e7eb; /* Light gray for dark mode */
+}
+
+.dark .prose p,
+.dark .prose ul,
+.dark .prose ol {
+  color: #d1d5db; /* Slightly darker than headings for better contrast */
+}
+
+/* Bold and italic text */
+.prose strong,
+.prose b {
+  color: #111827; /* Dark color for bold text in light mode */
+}
+
+.prose em,
+.prose i {
+  color: #374151; /* Color for italic text in light mode */
+}
+
+.dark .prose strong,
+.dark .prose b {
+  color: #f3f4f6; /* Lighter color for bold text in dark mode */
+}
+
+.dark .prose em,
+.dark .prose i {
+  color: #e5e7eb; /* Light gray for italic text in dark mode */
+}
+
+/* Headings font sizes */
+
+.prose p,
+.prose ul,
+.prose ol {
+  font-size: 1rem; /* Equivalent to text-base */
+}
+
+/* Link styles */
+.prose a {
+  @apply text-gray-700 underline underline-offset-2 decoration-gray-400 transition-colors duration-200;
+}
+
+.prose a:hover {
+  @apply text-gray-900 decoration-gray-600;
+}
+
+/* Dark mode link styles */
+.dark .prose a {
+  @apply text-gray-300 decoration-gray-500;
+}
+
+.dark .prose a:hover {
+  @apply text-gray-100 decoration-gray-300;
+}
+
+/* Inline code styles */
+.prose code:not(pre code) {
+  color: #4b5563; /* Gray-600 for light mode */
+  background-color: #f3f4f6; /* Gray-100 for light mode */
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+.dark .prose code:not(pre code) {
+  color: #e5e7eb; /* Gray-200 for dark mode */
+  background-color: #374151; /* Gray-700 for dark mode */
+}
+
+/* Code block styles */
+.prose pre {
+  background-color: #f3f4f6; /* Gray-100 for light mode */
+  color: #1f2937; /* Gray-800 for light mode */
+  padding: 1em;
+  border-radius: 0.375em;
+  overflow-x: auto;
+}
+
+.dark .prose pre {
+  background-color: #1f2937; /* Gray-800 for dark mode */
+  color: #f3f4f6; /* Gray-100 for dark mode */
+}
+
+.prose pre code {
+  background-color: transparent;
+  color: inherit;
+  font-size: 0.875em;
+  padding: 0;
+}
+
+/* Dark mode code elements */
+.dark .prose code {
+  background-color: #374151;
+  color: #e5e7eb;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+}
+
+/* Ensure no background for non-code elements */
+.prose p,
+.prose ul,
+.prose ol,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  background-color: transparent;
+}
+
+/* Table styles */
+.prose table {
+  @apply w-full border-collapse border border-gray-300;
+}
+
+.prose th,
+.prose td {
+  @apply border border-gray-300 px-4 py-2 text-left;
+}
+
+.prose th {
+  @apply bg-gray-100 font-semibold text-gray-700;
+}
+
+.prose td {
+  @apply text-gray-800;
+}
+
+/* Dark mode table styles */
+.dark .prose table {
+  @apply border-gray-700;
+}
+
+.dark .prose th,
+.dark .prose td {
+  @apply border-gray-700 text-gray-300;
+}
+
+.dark .prose th {
+  @apply bg-gray-800 text-gray-200;
+}
+
+.dark .prose td {
+  @apply text-gray-300;
+}
+
+/* Footnotes */
+.prose .footnotes {
+  @apply mt-8 border-t border-gray-300 pt-4;
+}
+
+.prose .footnotes ol {
+  @apply pl-4 text-sm text-gray-600;
+}
+
+.prose .footnotes li {
+  @apply mb-2;
+}
+
+.prose .footnotes li p {
+  @apply m-0;
+}
+
+.prose .data-footnote-backref {
+  @apply ml-2 text-gray-600 no-underline text-xs align-super leading-none;
+  font-family: Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.prose .data-footnote-backref:hover {
+  @apply text-gray-800;
+}
+
+/* Footnote reference in the text (annotation) */
+.prose [data-footnote-ref] {
+  @apply no-underline bg-gray-200 text-gray-600 px-1 py-0.5 rounded text-xs align-super leading-none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.prose [data-footnote-ref]:hover {
+  @apply bg-gray-300 text-gray-800;
+}
+
+/* Dark mode styles */
+.dark .prose .footnotes {
+  @apply border-gray-700;
+}
+
+.dark .prose .footnotes ol {
+  @apply text-gray-400;
+}
+
+.dark .prose .data-footnote-backref {
+  @apply text-gray-400;
+}
+
+.dark .prose .data-footnote-backref:hover {
+  @apply text-gray-200;
+}
+
+.dark .prose [data-footnote-ref] {
+  @apply bg-gray-700 text-gray-300;
+}
+
+.dark .prose [data-footnote-ref]:hover {
+  @apply bg-gray-600 text-gray-100;
+}
+
+/* Hide the "Footnotes" heading */
+.prose .footnotes .sr-only {
+  @apply hidden;
+}
